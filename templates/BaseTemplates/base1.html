@@ -11,6 +11,7 @@
         <meta charset="utf-8">
         <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/media/Logo/Logo.png"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lalezar&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
         <script src="{% static 'js/uikit.min.js' %}" ></script>
         <script src="{% static 'js/uikit-icons.min.js' %}" ></script>
       </head>
-      <body  class="greyC">
+      <body style="min-width: 100%; max-width:100%;  overflow-x: hidden;" class="greyC">
         <header>
             <nav class="uk-navbar-container" style="position: fixed;right: 0;left: 0;top: 0;z-index: 1030; background-color:#262626  ;box-shadow: 0 15px 17px rgba(0, 0,0, 0.18);" uk-navbar>
 
@@ -32,37 +33,37 @@
                     <ul class="uk-navbar-nav uk-navbar-nav uk-visible@s">
 
                       {% if user.is_authenticated %}
-                      <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"  href="{% url 'logout' %}">خروج</a></li>
+                      <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"  href="{% url 'logout' %}">خروج</a></li>
                       {% else %}
-                        <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'accounts:login' %}">ورود</a></li>
-                        <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'commonuser:signup' %}">عضویت</a></li>
+                        <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'accounts:login' %}">ورود</a></li>
+                        <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'commonuser:signup' %}">عضویت</a></li>
                         {% endif %}
-                    <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'jewlery:publiclist' %}">محصولات</a></li>
+                    <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'jewlery:publiclist' %}">محصولات</a></li>
                     {% if user.is_authenticated and user.is_superuser %}
-                      <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"    href="{% url 'accounts:dashboard' user.slug %}">داشبورد</a></li>
+                      <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"    href="{% url 'accounts:dashboard' user.slug %}">داشبورد</a></li>
                     {% endif %}
                     {% if user.is_authenticated and user.is_masteruser %}
-                      <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'masteruser:dashboard' user.slug %}">داشبورد</a></li>
+                      <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'masteruser:dashboard' user.slug %}">داشبورد</a></li>
                     {% endif %}
                     {% if user.is_authenticated and user.is_commonuser %}
                     <li>
-                      <a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="#">ناحیه کاربری</a>
+                      <a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="#">ناحیه کاربری</a>
                         <div class="uk-navbar-dropdown darkgreyC">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'commonuser:profile' user.slug %}">پروفایل</a></li>
-                                <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'order:listforuser' user.slug %}">سفارشات</a></li>                              </ul>
+                                <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'commonuser:profile' user.slug %}">پروفایل</a></li>
+                                <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'order:listforuser' user.slug %}">سفارشات</a></li>                              </ul>
                         </div>
                     </li>
 
                     {% endif %}
                     <li>
-                      <a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="#">طلا</a>
+                      <a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="#">زر مارکت</a>
                         <div class="uk-navbar-dropdown darkgreyC">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:aboutus' %}">درباره ما</a></li>
-                                <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:contactus' %}">تماس با ما</a></li>
-                                <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:faqs' %}">سوالات متداول</a></li>
-                                <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:termsandconditions' %}">قوانین</a></li>
+                                <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:aboutus' %}">درباره ما</a></li>
+                                <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:contactus' %}">تماس با ما</a></li>
+                                <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:faqs' %}">سوالات متداول</a></li>
+                                <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:termsandconditions' %}">قوانین</a></li>
                               </ul>
                       </div>
                     </li>
@@ -73,7 +74,7 @@
 
                     <ul class="uk-navbar-nav">
                         <li>
-                          <a class="uk-navbar-item uk-logo" href="{% url 'home' %}"><img src="/media/Logo/logo.png" width="80" alt=""></a>
+                          <a  class="uk-navbar-item uk-logo" href="{% url 'home' %}"><img style="margin:5px;" src="/media/Logo/Logo.png" width="80" alt=""></a>
                         </li>
                     </ul>
 
@@ -86,30 +87,30 @@
                 <ul class="uk-nav">
 
                           {% if user.is_authenticated %}
-                          <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'logout' %}">خروج</a></li>
+                          <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'logout' %}">خروج</a></li>
                           {% else %}
-                            <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'accounts:login' %}">ورود</a></li>
-                            <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'commonuser:signup' %}">عضویت</a></li>
+                            <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'accounts:login' %}">ورود</a></li>
+                            <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'commonuser:signup' %}">عضویت</a></li>
                             {% endif %}
-                        <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'jewlery:publiclist' %}">محصولات</a></li>
+                        <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'jewlery:publiclist' %}">محصولات</a></li>
                         {% if user.is_authenticated and user.is_superuser %}
-                          <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"    href="{% url 'accounts:dashboard' user.slug %}">داشبورد</a></li>
+                          <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"    href="{% url 'accounts:dashboard' user.slug %}">داشبورد</a></li>
                         {% endif %}
                         {% if user.is_authenticated and user.is_masteruser %}
-                          <li><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'masteruser:dashboard' user.slug %}">داشبورد</a></li>
+                          <li><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'masteruser:dashboard' user.slug %}">داشبورد</a></li>
                         {% endif %}
                         {% if user.is_authenticated and user.is_commonuser %}
                         <li>
-                          <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'commonuser:profile' user.slug %}">پروفایل</a></li>
-                          <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'order:listforuser' user.slug %}">سفارشات</a></li>
+                          <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'commonuser:profile' user.slug %}">پروفایل</a></li>
+                          <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'order:listforuser' user.slug %}">سفارشات</a></li>
                         </li>
 
                         {% endif %}
                         <li>
-                          <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:aboutus' %}">درباره ما</a></li>
-                          <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:contactus' %}">تماس با ما</a></li>
-                          <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:faqs' %}">سوالات متداول</a></li>
-                          <li class="uk-active"><a style="color:#d4af37; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:termsandconditions' %}">قوانین</a></li>
+                          <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:aboutus' %}">درباره ما</a></li>
+                          <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:contactus' %}">تماس با ما</a></li>
+                          <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:faqs' %}">سوالات متداول</a></li>
+                          <li class="uk-active"><a style="color:#c7a046; font-family: 'Harmattan', sans-serif; font-size:20px;"   href="{% url 'company:termsandconditions' %}">قوانین</a></li>
                         </li>
                 </ul>
             </div>

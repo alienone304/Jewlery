@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block body_block %}
-<div style="margin:1%;border-radius: 8px;" class="uk-card uk-card-body darkgreyC">
+<div style="margin:1%;border-radius: 8px;" class="uk-card uk-card-hover uk-card-body darkgreyC">
   <ul uk-accordion="multiple: true">
       <li style="border-right:5px #d4af37 solid; padding:10px;">
           <a style="padding:10px;" class="uk-accordion-title goldC darkgreyC-text fHarmattan" href="#">جستجو</a>
@@ -75,12 +75,14 @@
               <div class="uk-width-1-2 uk-width-1-4@m fHarmattan goldC-text uk-text-center ">
             {{filter.form.weight__lte}}
               </div>
+              {% if user.is_authenticated and user.commonusers.is_jewler %}
               <div class="uk-width-1-2 uk-width-1-4@m fHarmattan goldC-text uk-text-center  ">
             {{filter.form.wholesale_wage__gte}}
               </div>
               <div class="uk-width-1-2 uk-width-1-4@m fHarmattan goldC-text uk-text-center ">
             {{filter.form.wholesale_wage__lte}}
               </div>
+              {% endif %}
               <div class="uk-width-1-2 uk-width-1-4@m fHarmattan goldC-text uk-text-cente ">
             {{filter.form.sale_wage__gte}}
               </div>

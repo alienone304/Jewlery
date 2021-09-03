@@ -34,6 +34,12 @@
 .darkgreyC-text{
   color: #262626;
 }
+.greyC{
+  background-color: #363636;
+}
+.greyC-text{
+  color: #363636;
+}
 .redC{
   background-color: #ff0a0a;
 }

@@ -94,7 +94,8 @@ def JewleryPublicDetailView(request, pk):
     Scraping()
     UpdatePrice(request)
     jewlery = JewleryModel.objects.get(pk = pk)
-    return render (request,'jewlery/publicdetail.html',{'jewlery':jewlery})
+    jewleries = JewleryModel.objects.all()
+    return render (request,'jewlery/publicdetail.html',{'jewlery_detail':jewlery,'jewleries':jewleries})
 
 
 @login_required

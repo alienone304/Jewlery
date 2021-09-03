@@ -2721,7 +2721,7 @@ select.uk-form-width-xsmall {
 /* Hover modifier
  ========================================================================== */
 .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
-  background: #212121;
+  background: #242424;
   box-shadow: 0 18px 22px rgba(212, 175,55, 0.25);
 }
 /* Style modifiers
@@ -2739,7 +2739,7 @@ select.uk-form-width-xsmall {
   color: #333;
 }
 .uk-card-default.uk-card-hover:hover {
-  background-color: #212121;
+  background-color: #242424;
   box-shadow: 0 18px 22px rgba(212, 175, 55, 0.25);
 }
 .uk-card-default .uk-card-header {
@@ -2760,7 +2760,7 @@ select.uk-form-width-xsmall {
   color: #fff;
 }
 .uk-card-primary.uk-card-hover:hover {
-  background-color: #e8e8e8;
+  background-color: #242424;
   box-shadow: 0 14px 25px rgba(212, 175, 55, 0.16);
 }
 /*
@@ -2775,7 +2775,7 @@ select.uk-form-width-xsmall {
   color: #fff;
 }
 .uk-card-secondary.uk-card-hover:hover {
-  background-color: #222;
+  background-color: #242424;
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
 }
 /* Size modifier

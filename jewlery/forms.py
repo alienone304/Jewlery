@@ -12,33 +12,33 @@ class JewleryForm(forms.ModelForm):
         'is_used','is_domestic','is_available','is_confirmed','is_favorite',
         'is_goldset','is_pendant','is_bracelet','is_necklace','is_bangle','is_chain','is_earings','is_halfset','is_watch','is_anklet')
         widgets = {
-            'name': forms.TextInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'نام  محصول'},),
-            'made_in': forms.TextInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'ساخت کشور'},),
-            'company_name': forms.TextInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'شرکت سازنده'},),
-            'karat': forms.NumberInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'عیار'},),
-            'weight': forms.NumberInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'وزن'},),
-            'buy_wage': forms.NumberInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'اجرت خرید'},),
-            'sale_wage': forms.NumberInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'اجرت فروش'},),
-            'wholesale_wage': forms.NumberInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'اجرت فروش عمده'},),
+            'name': forms.TextInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'نام  محصول'},),
+            'made_in': forms.TextInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'ساخت کشور'},),
+            'company_name': forms.TextInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'شرکت سازنده'},),
+            'karat': forms.NumberInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'عیار'},),
+            'weight': forms.NumberInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'وزن'},),
+            'buy_wage': forms.NumberInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'اجرت خرید'},),
+            'sale_wage': forms.NumberInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'اجرت فروش'},),
+            'wholesale_wage': forms.NumberInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'اجرت فروش عمده'},),
 
-            'is_womanly': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_unisex': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_used': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_domestic': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_available': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_confirmed': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_favorite': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_womanly': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_unisex': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_used': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_domestic': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_available': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_confirmed': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_favorite': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
 
-            'is_goldset': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_pendant': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_bracelet': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_necklace': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_bangle': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_chain': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_earings': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_halfset': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_watch': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
-            'is_anklet': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_goldset': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_pendant': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_bracelet': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_necklace': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_bangle': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_chain': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_earings': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_halfset': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_watch': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
+            'is_anklet': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
 
         }
 
@@ -69,6 +69,6 @@ class UnitForm(forms.ModelForm):
         model = UnitModel
         fields = ('unit','auto_update')
         widgets = {
-        'unit': forms.TextInput(attrs={'style':'color:#d4af37;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'فی به ریال','onkeyup':'format(this)'},),
-        'auto_update': forms.CheckboxInput(attrs={'style':'color:#d4af37;background-color:#212121;','class': 'uk-checkbox'}),
+        'unit': forms.TextInput(attrs={'style':'color:#c7a046;background-color:#212121;','class':'uk-input fHarmattan','placeholder':'فی به ریال','onkeyup':'format(this)'},),
+        'auto_update': forms.CheckboxInput(attrs={'style':'color:#c7a046;background-color:#212121;','class': 'uk-checkbox'}),
         }

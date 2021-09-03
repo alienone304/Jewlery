@@ -8,12 +8,12 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock %}
 {% block body_block %}
-<br>
-<div class="uk-grid-match uk-grid-small uk-text-center " uk-grid>
-  <div class="uk-width-1-6 uk-width-1-4@m">
+<div   class="uk-text-center ">
+  <div style="padding:10%">
 
-  </div>
-      <div class="uk-width-2-3 uk-width-1-2@m uk-block ">
+
+<div style="padding: 3%;border-radius: 8px;" uk-grid>
+  <div class=" uk-width-1-1 uk-block fHarmattan ">
 <div class="uk-card uk-card-hover uk-card-body darkgreyC ">
     <h3 style="font-size:30px;" class="goldC-text uk-card-title uk-align-center fHarmattan">عضویت</h3>
     <form enctype="multipart/form-data" method="POST">
@@ -62,11 +62,10 @@
     </button><br><br>
     </form>
 </div>
-<div class="uk-width-1-6 uk-width-1-4@m">
 
 </div>
+  </div>
 </div>
-</div><br><br><br><br>
 <div class="uk-grid-match uk-text-center" uk-grid>
 
 
@@ -86,6 +85,7 @@
     <a class="uk-button uk-button-large darkgreyC-text goldC fHarmattan uk-text-large" href="{% url 'accounts:login' %}">ورود</a>
   </div>
 <br><br>
+</div>
 {% endblock %}
 {% block script_block %}
 <script type="text/javascript">
